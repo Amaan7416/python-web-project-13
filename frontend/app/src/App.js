@@ -4,6 +4,7 @@ import Home from './Components/screens/Home';
 import Header from './Components/Header';
 import EditApplicant from './Components/screens/EditApplicant';
 import Stats from './Components/screens/Stats';
+import LoginScreen from './Components/screens/LoginScreen';
 
 function App() {
   return (
@@ -18,6 +19,9 @@ function App() {
     </Routes>
     <Routes>
       <Route exact path="/StatisticsCollection" element={<Stats/>}></Route>
+    </Routes>
+     <Routes>
+      <Route exact path="/login" element={<LoginScreen/>}></Route>
     </Routes>
 
 

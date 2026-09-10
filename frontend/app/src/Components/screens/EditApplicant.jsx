@@ -13,7 +13,7 @@ function EditApplicant() {
 
   const fetchApplicantData =useCallback (async () => {
     try {
-      const response = await fetch(`update_applicant/${id}`);
+      const response = await fetch(`http://127.0.0.1:8000/api/update_applicant/${id}`);
       const data = await response.json();
       console.log(data);
       setApplicantData(data.applicant);
@@ -47,7 +47,7 @@ function EditApplicant() {
         },3000);
         return;
       }
-      await fetch(`/api/update_applicant/${id}`, {
+      await fetch(`http://127.0.0.1:8000/api/update_applicant/${id}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -223,7 +223,7 @@ class ConnectionListView(ListView):
 def update_applicant(request,id):
     if request.method=='GET':
         try:
-            console.log(id)
+            print(id)
             applicant=Applicant.objects.get(pk=id)
             connection=Connection.objects.get(Applicant=applicant)
             applicant_data = {
@@ -315,7 +315,7 @@ def connectionrequestdata(request):
 
     return JsonResponse({'labels':labels,'total_requests':total_requests})
 
-
+@csrf_exempt
 def handlelogin(request):
     if request.method == 'POST':
         data = json.loads(request.body)

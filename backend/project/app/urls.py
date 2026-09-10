@@ -10,6 +10,7 @@ urlpatterns = [
    path("update_applicant/<int:id>",views.update_applicant,name='update_applicant'),
    path("connectionvisualization/",views.connectionvisualization,name="connectionvisualization"),
    path("connectionrequestdata/",views.connectionrequestdata,name="connectionrequestdata"),
+   path("login/",views.handlelogin, name="handlelogin"),
 ]
 
 #""=="/"=="localhost"==http://127.0.0.1:8000/
